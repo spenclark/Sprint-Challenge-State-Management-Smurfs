@@ -9,8 +9,9 @@ import "./index.css";
 import App from "./components/App";
 
 const store = createStore( rootReducer ,applyMiddleware(thunk))
+
 ReactDOM.render(
-<Provider>
+<Provider store={store}>
 <App />
 </Provider>
 , document.getElementById("root"));
